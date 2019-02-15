@@ -12,22 +12,22 @@ npm install @beeme1mr/dynatrace-unit-converter --save
 
 ### Digital
 
-- "bit"
-- "kb"
-- "Kibit"
-- "mb"
-- "Mebibit"
-- "Gb"
-- "Gibibit"
-- "Tb"
-- "B"
-- "kB"
-- "KiB"
-- "MB"
-- "MiB"
-- "GB"
-- "GiB"
-- "TB";
+- bit
+- kb
+- Kibit
+- mb
+- Mebibit
+- Gb
+- Gibibit
+- Tb
+- B
+- kB
+- KiB
+- MB
+- MiB
+- GB
+- GiB
+- TB
 
 ### Time
 
