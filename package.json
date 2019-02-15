@@ -1,7 +1,7 @@
 {
-  "name": "unit-converter",
+  "name": "@beeme1mr/dynatrace-unit-converter",
   "version": "1.0.0",
-  "description": "Basic unit converter",
+  "description": "Basic Dynatrace unit converter",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
