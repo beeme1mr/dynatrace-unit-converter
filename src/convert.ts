@@ -1,4 +1,6 @@
 import { each, isBoolean, keys } from "lodash";
+import { digital } from "./definitions/digital";
+import { time } from "./definitions/time";
 import {
   IBestFit,
   IUnit,
@@ -8,15 +10,13 @@ import {
   System,
   Unit
 } from "./types";
-import { digital } from "./definitions/digital";
-import { time } from "./definitions/time";
 
 class Convert {
   private origin: IUnit | null = null;
   private destination: IUnit | null = null;
   private measures = {
-    time,
-    digital
+    digital,
+    time
   } as { [M in Measure]: IUnitDefinition };
 
   constructor(private value: number) {}
@@ -228,9 +228,9 @@ const describe = (resp: IUnit): IUnitDescription => {
   return {
     abbr: resp.abbr,
     measure: resp.measure,
-    system: resp.system,
+    plural: resp.unit.name.plural,
     singular: resp.unit.name.singular,
-    plural: resp.unit.name.plural
+    system: resp.system
   };
 };
 
