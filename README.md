@@ -2,6 +2,12 @@
 
 This utility is a TypeScript port of the [convert-units](https://github.com/ben-ng/convert-units) project but with a focus on units that Dynatrace supports.
 
+## Installation
+
+```
+npm install @beeme1mr/dynatrace-unit-converter --save
+```
+
 ## Supported Units
 
 ### Digital
