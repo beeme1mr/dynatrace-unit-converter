@@ -20,7 +20,10 @@ export function convert(
 
   const mappedUnit = mapUnit(parsedUnit);
 
-  if (mappedUnit && (mappedUnit.type === "time" || mappedUnit.type === "size")) {
+  if (
+    mappedUnit &&
+    (mappedUnit.type === "time" || mappedUnit.type === "size")
+  ) {
     if (targetUnit) {
       const parsedTargetUnit = parseUnit(targetUnit);
       const mappedTargetUnit = mapUnit(parsedTargetUnit);
@@ -44,7 +47,8 @@ export function convert(
       const parsedTargetUnit = parseUnit(targetUnit);
       const mappedTargetUnit = mapUnit(parsedTargetUnit);
       if (mappedTargetUnit && mappedTargetUnit.type === "throughput") {
-        const targetConversionUnit = mappedTargetUnit.conversionSymbol || mappedTargetUnit.symbol;
+        const targetConversionUnit =
+          mappedTargetUnit.conversionSymbol || mappedTargetUnit.symbol;
         const convertedTargetValue = convertToSpecificUnit(
           num,
           conversionUnit,

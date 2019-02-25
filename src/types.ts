@@ -55,7 +55,10 @@ export interface IBestFit {
   plural: string;
 }
 
-export type MappedUnit = IMappedUnitTime | IMappedUnitSize | IMappedUnitThroughput;
+export type MappedUnit =
+  | IMappedUnitTime
+  | IMappedUnitSize
+  | IMappedUnitThroughput;
 
 export interface IMappedUnitTime {
   type: "time";

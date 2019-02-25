@@ -75,7 +75,9 @@ class Convert {
     /**
      * Convert to another unit inside the destination system
      */
-    return this.roundToNearestHundredth(result / this.destination.unit.to_anchor);
+    return this.roundToNearestHundredth(
+      result / this.destination.unit.to_anchor
+    );
   }
 
   public toBestFit(
@@ -120,7 +122,7 @@ class Convert {
       throw new Error("Unable to find a best fit");
     }
 
-    return best
+    return best;
   }
 
   public describe(abbr: Unit) {
