@@ -1,8 +1,9 @@
-import { convert } from "../convert";
+import { convert as convertClass } from "../convert";
+import { convert } from "../index";
 
 describe("Convert", () => {
   test("Bytes to Gigabytes", () => {
-    const output = convert(1073741824)
+    const output = convertClass(1073741824)
       .from("B")
       .toBestFit();
 
@@ -10,11 +11,11 @@ describe("Convert", () => {
       plural: "gigabytes",
       singular: "gigabyte",
       unit: "GB",
-      val: 1.073741824
+      val: 1.07
     });
   });
   test("Gigabytes to Terabytes", () => {
-    const output = convert(1000)
+    const output = convertClass(1000)
       .from("GB")
       .toBestFit();
 
@@ -26,7 +27,7 @@ describe("Convert", () => {
     });
   });
   test("Kibibits to Mebibits", () => {
-    const output = convert(1024)
+    const output = convertClass(1024)
       .from("Kibit")
       .toBestFit();
 
@@ -38,7 +39,7 @@ describe("Convert", () => {
     });
   });
   test("kibibytes to Mebibytes", () => {
-    const output = convert(1024)
+    const output = convertClass(1024)
       .from("KiB")
       .toBestFit();
 
@@ -47,6 +48,18 @@ describe("Convert", () => {
       singular: "mebibyte",
       unit: "MiB",
       val: 1
+    });
+  });
+
+  test("converting to a specific unit", () => {
+    const baseUnit = convert(10020, "µs");
+
+    expect(convert(100000, "µs", baseUnit.symbol)).toEqual({
+      name: "milliseconds",
+      preConvertedSymbol: "mu",
+      symbol: "ms",
+      type: "time",
+      value: 100
     });
   });
 });

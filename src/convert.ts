@@ -75,7 +75,7 @@ class Convert {
     /**
      * Convert to another unit inside the destination system
      */
-    return result / this.destination.unit.to_anchor;
+    return this.roundToNearestHundredth(result / this.destination.unit.to_anchor);
   }
 
   public toBestFit(
@@ -108,7 +108,7 @@ class Convert {
           (result >= updateOptions.cutOffNumber && result < best.val)
         ) {
           best = {
-            val: result,
+            val: this.roundToNearestHundredth(result),
             unit: possibility,
             singular: unit.singular,
             plural: unit.plural
@@ -120,10 +120,10 @@ class Convert {
       throw new Error("Unable to find a best fit");
     }
 
-    return best;
+    return best
   }
 
-  private describe(abbr: Unit) {
+  public describe(abbr: Unit) {
     const resp = this.getUnit(abbr);
     let desc = null;
 
@@ -134,6 +134,10 @@ class Convert {
     }
 
     return desc;
+  }
+
+  private roundToNearestHundredth(input: number): number {
+    return Math.round(input * 100) / 100;
   }
 
   private getUnit(abbr: Unit): IUnit {

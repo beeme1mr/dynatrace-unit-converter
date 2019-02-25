@@ -41,3 +41,6 @@ npm install @beeme1mr/dynatrace-unit-converter --save
 - week
 - month
 - year
+
+#### NOTE
+Converted values will have a max precision of 1/100 of final output value.
