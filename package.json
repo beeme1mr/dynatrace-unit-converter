@@ -1,5 +1,6 @@
 {
   "name": "@beeme1mr/dynatrace-unit-converter",
+  "private": false,
   "version": "1.1.0",
   "description": "Basic Dynatrace unit converter",
   "main": "lib/index.js",
