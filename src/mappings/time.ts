@@ -9,6 +9,10 @@ const timeUnits: IUnitMapping = {
     name: "microsecond",
     symbol: "mu"
   },
+  mu: {
+    name: "microsecond",
+    symbol: "mu"
+  },
   ms: {
     name: "millisecond",
     symbol: "ms"
@@ -21,7 +25,15 @@ const timeUnits: IUnitMapping = {
     name: "minute",
     symbol: "min"
   },
+  min: {
+    name: "minute",
+    symbol: "min"
+  },
   hs: {
+    name: "hour",
+    symbol: "h"
+  },
+  h: {
     name: "hour",
     symbol: "h"
   }
